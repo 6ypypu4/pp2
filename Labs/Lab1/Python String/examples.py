@@ -1,5 +1,7 @@
+#Python Strings
 print("Hello")
 print('Hello')
+
 a = "Hello"
 print(a)
 
@@ -20,11 +22,10 @@ print(a[1])
 
 for x in "banana":
   print(x)
-  # how to put them in a row?????????????? 
 
-a = "Hello, World!" #len(" ") = 1
+a = "Hello, World!" 
 print(len(a))
-# NEWWWW!!!!
+
 txt = "The best things in life are free!"
 print("free" in txt)
 
@@ -34,13 +35,13 @@ if "free" in txt:
 
 txt = "The best things in life are free!"
 print("expensive" not in txt)
-#actually boring
 
 txt = "The best things in life are free!"
 if "expensive" not in txt:
   print("No, 'expensive' is NOT present.")
 
 
+#Python - Slicing Strings
 b = "Hello, World!"
 print(b[2:5])
 
@@ -53,6 +54,8 @@ print(b[2:])
 b = "Hello, World!"
 print(b[-5: -2])
 
+
+#Python - Modify Strings
 a = "Hello, World!"
 print(a.upper())
 
@@ -68,6 +71,8 @@ print(a.replace("H", "J"))
 a = "Hello, World!"
 print(a.split(",")) # returns ['Hello', ' World!']
 
+
+#Python - String Concatenation
 a = "Hello"
 b = "World"
 c = a + b
@@ -78,6 +83,8 @@ b = "World"
 c = a + " " + b
 print(c)
 
+
+#Python - Format - Strings
 age = 36
 txt = "My name is John, and I am {}"
 print(txt.format(age))
@@ -95,6 +102,8 @@ price = 49.95
 myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
 print(myorder.format(quantity, itemno, price))
 
+
+#Python - Escape Characters
 txt = "We are the so-called \"Vikings\" from the north."
 
 txt = 'It\'s alright.'
