@@ -12,9 +12,9 @@ def main():
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                print("Кнопка мыши нажата:", event.button)
+                print("Кнопка мыши нажата в точке ", event.pos)
             elif event.type == pygame.MOUSEBUTTONUP:
-                print("Кнопка мыши отпущена:", event.button)
+                print("Кнопка мыши отпущена в точке ", event.pos)
             elif event.type == pygame.MOUSEMOTION:
                 print("Движение мыши в точку:", event.pos)
                 print("Изменение:", event.rel)
