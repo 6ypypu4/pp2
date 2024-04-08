@@ -1,5 +1,4 @@
 import pygame
-import time
 import random
 
 pygame.init()
@@ -37,6 +36,7 @@ def message(msg, color):
     dis.blit(mesg, [dis_width / 6, dis_height / 3])
 
 def gameLoop():
+    global snake_speed
     game_over = False
     game_close = False
 
