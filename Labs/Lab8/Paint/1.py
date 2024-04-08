@@ -72,7 +72,7 @@ while running:
                 current_color = RED
             elif event.key == pygame.K_g:  # G - выбрать зеленый цвет
                 current_color = GREEN
-            elif event.key == pygame.K_b:  # B - выбрать синий цвет
+            elif event.key == pygame.K_l:  # B - выбрать синий цвет
                 current_color = BLUE
 
     # Отрисовка
@@ -92,8 +92,9 @@ while running:
         elif drawing_mode == "eraser":
             if left_button_pressed:
                 pygame.draw.circle(screen, WHITE, pygame.mouse.get_pos(), ERASER_SIZE)
-
+    clock.tick(60) 
     pygame.display.flip()
+    
 
 pygame.quit()
 

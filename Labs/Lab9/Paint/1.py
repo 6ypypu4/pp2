@@ -2,6 +2,7 @@ import pygame
 import math
 
 pygame.init()
+clock = pygame.time.Clock()
 
 # Размеры экрана
 SCREEN_WIDTH = 800
@@ -130,31 +131,32 @@ while running:
                 drawing_mode = "rhombus"
     # Отрисовка
     if left_button_pressed or right_button_pressed:
-      if drawing_mode == "brush":
+      if drawing_mode == "brush":#
         if left_button_pressed:
             pygame.draw.circle(screen, current_color, pygame.mouse.get_pos(), BRUSH_SIZE)
         elif right_button_pressed:
             pygame.draw.circle(screen, WHITE, pygame.mouse.get_pos(), BRUSH_SIZE*5)
-      elif drawing_mode == "rect":
+      elif drawing_mode == "rect":#
         if left_button_pressed:
             draw_rect(screen, current_color, start_pos, pygame.mouse.get_pos())
-      elif drawing_mode == "circle":
+      elif drawing_mode == "circle": #
         if left_button_pressed:
             radius = ((pygame.mouse.get_pos()[0] - start_pos[0])**2 + (pygame.mouse.get_pos()[1] - start_pos[1])**2)**0.5
             draw_circle(screen, current_color, start_pos, int(radius))
-      elif drawing_mode == "eraser":
+      elif drawing_mode == "eraser":#
         if left_button_pressed:
             pygame.draw.circle(screen, WHITE, pygame.mouse.get_pos(), ERASER_SIZE)
-      elif drawing_mode == "square":
+      elif drawing_mode == "square":#
         if left_button_pressed:
             draw_square(screen, current_color, start_pos, pygame.mouse.get_pos())
       elif drawing_mode == "right_triangle":
         if left_button_pressed:
             draw_right_triangle(screen, current_color, start_pos, pygame.mouse.get_pos())
-      elif drawing_mode == "equilateral_triangle":
+      elif drawing_mode == "equilateral_triangle":#
         if left_button_pressed:
-            draw_equilateral_triangle(screen, current_color, start_pos, pygame.mouse.get_pos())
+            draw_equilateral_triangle(screen, current_color, start_pos, pygame.mouse.get_pos(),)
       elif drawing_mode == "rhombus":
         if left_button_pressed:
             draw_rhombus(screen, current_color, start_pos, pygame.mouse.get_pos())
     pygame.display.flip()
+    clock.tick(60)  
